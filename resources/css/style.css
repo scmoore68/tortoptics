@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-/* Universal styles */
+/* Universal Styles */
 
 body {
   font-family: Helvetica, sans-serif;
@@ -24,7 +24,7 @@ body {
   display: flex;
 }
 
-/* Header banner */
+/* Header Banner */
 
 header {
   background-image: url('../images/glasses-bg.png');
@@ -36,7 +36,7 @@ header {
   padding-top: 1rem;
 }
 
-/* Header logo/company name */
+/* Header Logo/Company Name */
 
 .tophead .container {
   background-color: cadetblue;
@@ -67,23 +67,18 @@ header {
   justify-content: flex-end;
 }
 
-/* Header menu */
-
-/* .tophead nav span {
-  display: inline-block;
-  padding-right: 2rem;
-} */
+/* Menu */
 
 nav ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* background-color: transparent; */
 }
 
 nav li {
   padding-right: 2rem;
 }
+
 .tophead a {
   font-size: 1rem;
   color: white;
@@ -94,7 +89,7 @@ nav li {
   display: none;
 }
 
-/* Banner text box */
+/* Banner Text Box */
 
 header .flex {
   justify-content: flex-end;
@@ -115,7 +110,7 @@ header .flex {
   line-height: 1.2;
 }
 
-/* Featured services */
+/* Featured Services */
 
 .container .featured {
   position: relative;
@@ -143,9 +138,7 @@ header .flex {
   width: 5rem;
 }
 
-
-
-/* Philosopy/appointments */
+/* Philosopy/Appointments */
 
 .support-info {
   display: flex;
@@ -176,7 +169,7 @@ header .flex {
   width: 10rem;
 }
 
-/* footer */
+/* Footer */
 
 footer {
   background-color: azure;
@@ -205,16 +198,20 @@ footer {
 
 @media only screen and (min-width: 470px) and (max-width: 1024px)
 {
+  /* Header Changes */
+
   header {
     height: 22rem;
     padding-top: 0;
   }
+
   .banner-text {
     padding: 0.75rem 4rem;
     display: inline-block;
     margin-top: 5rem;
     margin-right: 2rem;
   }
+
   .banner-text h1 {
     font-size: 1.33rem;
   }
@@ -224,63 +221,97 @@ footer {
 
 @media only screen and (max-width: 470px)
 {
+  /* Header Changes */
+
   header {
     height: 17rem;
     padding-top: 0;
     background-position: 20%;
   }
+
   .logo h4.mobile {
     display: none;
   }
+
+  /* Banner Text Box Changes */
+
   .banner-text {
     padding: 1rem 0;
     display: inline-block;
     margin-top: 9rem;
     margin-right: 0;
     width: 100%;
-
   }
+
   .banner-text h1 {
     font-size: 1rem;
     text-align: center;
   }
+
+/* Menu Changes */
+
   nav ul {
     display: none;
   }
+
   .tablet-nav {
     display: block;
     text-align: center;
   }
+
+  /* Featured Services Changes */
+
   .featured {
     flex-direction: column;
     align-items: center;
     margin: 3.77rem 0;
   }
+
   .featured-item {
     margin: 0;
   }
+
   .featured-top {
     margin-bottom: 1.54rem;
   }
-  .info {
+
+  /* Philosopy/Appointments Changes */
+
+  .support-info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
-    align-content: flex-start;
-    width: 35%;
+    margin-bottom: 4rem;
+  }
+
+  .info {
+    width: 100%;
   }
 
   .info.left {
-    margin-right: 5%;
+    margin-right: 0;
+    margin-bottom: 4rem;
   }
 
-  .info h3 {
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: cadetblue;
-    color: white;
-    padding: 0.5rem 0 0.5rem 1.25rem;
-    margin-bottom: 1rem;
-    width: 10rem;
+  p.info {
+    font-size: 0.77rem;
+  }
+
+  /* Footer Changes */
+
+  .logo-foot {
+    margin: 4rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo-foot img {
+    height: 1.5rem;
+    padding-right: 0;
+  }
+
+  .logo-foot div {
+    display: none;
   }
 }
