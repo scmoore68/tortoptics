@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Universal styles */
+
 body {
   font-family: Helvetica, sans-serif;
   font-size: 18px;
@@ -9,17 +19,30 @@ body {
    margin: 0 auto;
 }
 
-/* Header with logo, company name, and menu */
 
-.header .container {
+.flex {
+  display: flex;
+}
+
+/* Header banner */
+
+header {
+  background-image: url('../images/glasses-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+/* Header logo/company name */
+
+.tophead .container {
   background-color: cadetblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
-  /* position: fixed;
-  z-index: 5;
-  width: 100%; */
 }
 
 .logo {
@@ -38,45 +61,226 @@ body {
   color: white;
 }
 
-.header nav {
+.tophead nav {
   display: inline-block;
   padding: 1rem 0;
   justify-content: flex-end;
 }
 
-/* Menu */
+/* Header menu */
 
-.header nav span {
+/* .tophead nav span {
   display: inline-block;
   padding-right: 2rem;
+} */
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: transparent; */
 }
 
-.header a {
+nav li {
+  padding-right: 2rem;
+}
+.tophead a {
   font-size: 1rem;
   color: white;
   text-decoration: none;
 }
 
-/* Banner */
+.tablet-nav {
+  display: none;
+}
 
-.banner {
-  background-image: url('../images/glasses-bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 25rem;
+/* Banner text box */
+
+header .flex {
+  justify-content: flex-end;
 }
 
 .banner-text {
   background-color: white;
-  width: 20rem;
+  width: fit-content;
   padding: 1.5rem 5rem;
-  position: relative;
-  top: 10rem;
+  display: inline-block;
+  margin-top: 10rem;
+  margin-right: -2rem;
 }
 
 .banner-text h1 {
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
+}
+
+/* Featured services */
+
+.container .featured {
+  position: relative;
+}
+.featured {
+  display: flex;
+  justify-content: center;
+}
+
+.featured-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 3rem;
+  height: 8rem;
+  width: 5rem;
+}
+
+.featured-item img.exam {
+  width: 3.5rem;
+}
+.featured-item img {
+  width: 5rem;
+}
+
+
+
+/* Philosopy/appointments */
+
+.support-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 35%;
+}
+
+.info.left {
+  margin-right: 5%;
+}
+
+.info h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: cadetblue;
+  color: white;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+/* footer */
+
+footer {
+  background-color: azure;
+  height: 9.5rem;
+  display: flex;
+}
+
+.logo-foot {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  margin: 4rem 0 4rem 4rem;
+}
+
+.logo-foot img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+.logo-foot h4 {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Screen size changes for 1024px (tablet) screens */
+
+@media only screen and (min-width: 470px) and (max-width: 1024px)
+{
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+  .banner-text {
+    padding: 0.75rem 4rem;
+    display: inline-block;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+  .banner-text h1 {
+    font-size: 1.33rem;
+  }
+}
+
+/* Screen size changes for 470px (mobile) screens */
+
+@media only screen and (max-width: 470px)
+{
+  header {
+    height: 17rem;
+    padding-top: 0;
+    background-position: 20%;
+  }
+  .logo h4.mobile {
+    display: none;
+  }
+  .banner-text {
+    padding: 1rem 0;
+    display: inline-block;
+    margin-top: 9rem;
+    margin-right: 0;
+    width: 100%;
+
+  }
+  .banner-text h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  nav ul {
+    display: none;
+  }
+  .tablet-nav {
+    display: block;
+    text-align: center;
+  }
+  .featured {
+    flex-direction: column;
+    align-items: center;
+    margin: 3.77rem 0;
+  }
+  .featured-item {
+    margin: 0;
+  }
+  .featured-top {
+    margin-bottom: 1.54rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 35%;
+  }
+
+  .info.left {
+    margin-right: 5%;
+  }
+
+  .info h3 {
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: cadetblue;
+    color: white;
+    padding: 0.5rem 0 0.5rem 1.25rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+  }
 }
