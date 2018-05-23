@@ -1,0 +1,82 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.container {
+   max-width: 960px;
+   margin: 0 auto;
+}
+
+/* Header with logo, company name, and menu */
+
+.header .container {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  /* position: fixed;
+  z-index: 5;
+  width: 100%; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.logo h4 {
+  font-size: 1rem;
+  color: white;
+}
+
+.header nav {
+  display: inline-block;
+  padding: 1rem 0;
+  justify-content: flex-end;
+}
+
+/* Menu */
+
+.header nav span {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.header a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url('../images/glasses-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+}
+
+.banner-text {
+  background-color: white;
+  width: 20rem;
+  padding: 1.5rem 5rem;
+  position: relative;
+  top: 10rem;
+}
+
+.banner-text h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+}
